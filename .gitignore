@@ -1,0 +1,22 @@
+# Secrets — NEVER commit these
+.env
+tokens.json
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Rendered README preview (GitHub renders README.md itself)
+README.html
+README_files/

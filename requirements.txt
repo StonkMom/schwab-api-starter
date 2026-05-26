@@ -1,0 +1,6 @@
+# Schwab API Python Starter (Lite) — dependencies.
+
+requests>=2.31.0       # REST calls
+pytz>=2024.1           # America/New_York time handling
+python-dotenv>=1.0.0   # load .env (SchwabAuth.from_env)
+cryptography>=42.0.0   # self-signed cert for the localhost OAuth callback
