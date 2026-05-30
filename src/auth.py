@@ -19,6 +19,7 @@ Usage:
 from __future__ import annotations
 
 import base64
+import ipaddress
 import json
 import logging
 import os
@@ -118,7 +119,7 @@ def _make_selfsigned_cert(certfile: Path) -> None:
         .not_valid_after(_now_utc + _dt.timedelta(days=30))
         .add_extension(
             x509.SubjectAlternativeName([x509.DNSName("localhost"),
-                                          x509.IPAddress(__import__("ipaddress").ip_address("127.0.0.1"))]),
+                                          x509.IPAddress(ipaddress.ip_address("127.0.0.1"))]),
             critical=False,
         )
         .sign(key, hashes.SHA256())
@@ -269,6 +270,10 @@ class SchwabAuth:
         except OSError:
             print("", file=sys.stderr)
             print("=" * 70, file=sys.stderr)
+            if sys.platform == "win32":
+                kill_hint = "    Stop-Process -Name python -Force   # PowerShell"
+            else:
+                kill_hint = f"    lsof -ti :{port} | xargs kill       # Mac / Linux"
             print(
                 "  Auth won't start: a previous Python process is still",
                 f"  using port {port} (the OAuth callback port).",
@@ -277,9 +282,9 @@ class SchwabAuth:
                 "  down cleanly — maybe you closed the browser window",
                 "  before completing the Schwab login.",
                 "",
-                "  To fix, copy and paste this command into PowerShell:",
+                "  To fix, kill the old process:",
                 "",
-                "    Stop-Process -Name python -Force -ErrorAction SilentlyContinue",
+                kill_hint,
                 "",
                 "  Then run auth again:",
                 "",
