@@ -19,13 +19,17 @@ import time
 from dataclasses import dataclass
 from typing import Any, Iterable, Optional
 
-import pytz
 import requests
+
+try:
+    from zoneinfo import ZoneInfo
+except ImportError:
+    from backports.zoneinfo import ZoneInfo
 
 from .auth import SchwabAuth
 
 log = logging.getLogger(__name__)
-_ET = pytz.timezone("America/New_York")
+_ET = ZoneInfo("America/New_York")
 
 MARKET_BASE = "https://api.schwabapi.com/marketdata/v1"
 TRADER_BASE = "https://api.schwabapi.com/trader/v1"
