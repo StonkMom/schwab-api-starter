@@ -2,7 +2,7 @@
 
 Build your own trading bot on the **Schwab API**. This is the free starter: a working login (OAuth) in Python, plus a small client for pulling quotes and account data. The login is the part everyone gets stuck on, and this gets you past it.
 
-This is the **lite version** of the framework from [Build Your Own Schwab Trading Bot with Claude Code](https://stonkmom.gumroad.com). It includes the hardest part to get right (OAuth) plus enough of a REST client to fetch quotes and account info. The full framework adds order placement, risk management, the dashboard, the watchdog layer, the Claude Code workflow guide, and a senior-engineer code-reviewer slash command.
+This is the **lite version** of the framework from [Build Your Own Schwab Trading Bot with Claude Code](https://stonkmom.gumroad.com). It includes the hardest part to get right (OAuth) plus enough of a REST client to fetch quotes and account info. The full framework adds order placement, risk management, the dashboard, the watchdog layer, the Claude Code workflow guide, and a senior-engineer code-reviewer slash command named Sheldon.
 
 ## What's in this repo (free)
 
@@ -24,9 +24,9 @@ All of this runs against the Schwab Developer API, which requires a Schwab broke
 - Risk layer (position sizing, daily loss caps, max positions)
 - Health monitoring + dead-man's-switch
 - Phone-accessible dashboard
-- SMTP + Telegram alerts
+- Telegram alerts
 - The Strategy protocol + a worked example strategy
-- 9-chapter playbook covering architecture, the Claude Code workflow, deployment, and the going-live checklist
+- 9-chapter playbook covering everything from setup to launch and what comes after, plus a resources appendix and a glossary
 - The Sheldon slash command (a senior-engineer code-reviewer)
 
 The playbook and framework are at [stonkmom.gumroad.com](https://stonkmom.gumroad.com).
