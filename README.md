@@ -15,7 +15,7 @@ That's enough to authenticate and pull market data. Not enough to actually trade
 
 ## You'll need a Schwab account
 
-All of this runs against the Schwab Developer API, which requires a Schwab brokerage account. If you don't have one, you can open one with my referral link: [open a Schwab account](https://www.schwab.com/client-referral?refrid=REFERZQWTDB9M). It's a referral link, so I may get a small bonus. You don't have to use it.
+All of this runs against the Schwab Developer API, which requires a Schwab brokerage account. If you don't have one, you can open one with my referral link: [open a Schwab account](https://www.schwab.com/client-referral?refrid=REFERZQWTDB9M). You could get a bonus. You don't have to use it.
 
 ## What's in the paid version
 
