@@ -65,4 +65,6 @@ MIT. Use it however you want. No warranty.
 
 ## Disclaimer
 
-This code talks to a real brokerage API. Trading is risky. Use this code with paper-mode workflows or tiny test trades first. The author is not responsible for losses.
+Day trading loses money for most people who try it. Algo trading does not change that. This product is not financial advice and the author is not a registered advisor. The example strategy in the playbook is a teaching tool, not a recommendation. Use at your own risk and only with money you can afford to lose.
+
+The Schwab API Starter repo is provided to you "as is," without warranty of any kind, either express or implied. StonkMom expressly disclaims any and all representations, warranties or conditions, whether express, implied, or statutory, including without limitation, any implied warranties of merchantability, fitness for a particular purpose, or non-infringement.
